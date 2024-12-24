@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    height: 100vh;
+    width: 100%;
+    background-color: #E4F1AC;
+}
+
+#main{
+    padding: 70px;
+}
+
+#noteslist{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.heading{
+    color: black;
+}
+
+.notes{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.notescontainer{
+    margin: 50px;
+    background-color: #FF748B;
+    min-width: 240px;
+    height: 250px;
+    border: 2px solid black;
+    border-radius: 10px;
+    transition: all 1s;
+}
+
+.button{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+}
+
+.noteheader{
+    position: relative;
+    max-height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    opacity: 0;
+}
+
+.title{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+.opt{
+    position: relative;
+    border: none;
+    border-radius: 50%;
+    min-height: 30px;
+    width: auto;
+    background-color: rgba(0, 0, 225, 0.8);
+    color: white;
+    cursor: pointer;
+}
+
+.notebody{
+    padding: 15px;
+    height: 85%;
+    overflow: hidden;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.notebody textarea{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 0.5rem;
+    border: none;
+    background-color: transparent;
+    width: 300px;
+    height: 98%;
+    resize: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+    outline: none;
+}
+.notescontainer:hover .noteheader{
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    animation: fadeIn 0.5s forwards;
+}
+
+.notescontainer:hover{
+    box-shadow: inset 100px 100px 100px rgba(0, 0, 0, 0.2); 
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+textarea::-webkit-scrollbar{
+    width: 1em;
+}
